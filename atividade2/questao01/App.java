@@ -1,4 +1,4 @@
-package questao01;
+package atividade2.questao01;
 
 public class App {
     public static void main(String[] args) {
