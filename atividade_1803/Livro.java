@@ -1,7 +1,5 @@
 package atividade_1803;
 
-import java.util.Objects;
-
 public class Livro {
     int isbn;
     String autor, editora, titulo;
@@ -13,4 +11,15 @@ public class Livro {
         this.titulo = titulo;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Livro livro = (Livro) obj;
+        return this.isbn == livro.isbn; 
+    }
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(isbn);
+    }
 }
